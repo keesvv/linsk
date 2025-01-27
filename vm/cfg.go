@@ -66,7 +66,7 @@ func configureBaseVMCmd(logger *slog.Logger, cfg Config) (string, []qemucli.Arg,
 	}
 
 	if osspecifics.IsMacOS() {
-		args = append(args, qemucli.MustNewStringArg("cpu", "host"))
+		args = append(args, qemucli.MustNewStringArg("cpu", "cortex-a57"))
 	}
 
 	var accel []qemucli.KeyValueArgItem
